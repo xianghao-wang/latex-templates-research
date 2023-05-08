@@ -1,0 +1,12 @@
+Hey all,
+
+First of all: this list is intended for me, Pascal (although it's public).
+However, if you feel like something else should be improved, please just reach out to me! Nothing is ever perfect!
+
+Pascal -- pascal.bercher@anu.edu.au
+
+
+Open ToDos:
+- presentation template (and possibly lectures): logo is outdated, the "l" has the wrong font (cf. report template, that's correct)
+- Empirical Evaluation advice could be improved: add subsections for the various parts.
+- Re-compile the entire report because the provided PDF has the wrong cover. (Make sure I have a note in the PDF telling students that they should look for different designs they can choose from.)

@@ -1,0 +1,23 @@
+\usepackage{booktabs}             % fancy tables
+\usepackage{amsmath,amssymb}      % standard math stuff
+\usepackage{appendixnumberbeamer} % appendix page numbers
+\usepackage[scaled=.90]{helvet}   % uses and scales down this font by 10%
+
+% references using biber
+\usepackage[
+  defernumbers=true,
+  minnames=1,
+  maxnames=4,
+  sorting=none,
+  backend=biber,
+  giveninits=true]
+  {biblatex}
+\setbeamertemplate{bibliography item}{\insertbiblabel}
+\addbibresource{references.bib}
+
+\input{./chapter-\ChapterNumber/configuration}
+\input{configuration}
+% optional arguments:
+%   background --> section and frame titles will use a background color
+%   twoAuthors --> the title slide (and the bottom of each slide) will show two authors
+\usepackage[]{../../AmnestyInternational}

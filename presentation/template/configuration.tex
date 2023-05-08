@@ -1,0 +1,62 @@
+% author: Pascal Bercher
+%         pascal.bercher@anu.edu.au
+%         https://comp.anu.edu.au/people/pascal-bercher
+%         https://bercher.net
+% date: 14.9.2022
+
+
+
+% defines the main color
+\definecolor{main_color}{RGB}{125,154,170}
+
+% title logo (the left one in case there are two)
+\newcommand{\VSpaceBeforeLogo}        {0cm}
+\newcommand*{\OptionsForTitleLogoOne} {width=4cm}
+\newcommand{\LocationOfTitleLogoOne}  {logo/ANU-logo}
+
+% right title logo if not left empty
+\newcommand{\HSpaceBetweenLogos}      {.6cm}
+\newcommand*{\OptionsForTitleLogoTwo} {height=1.25cm}
+\newcommand{\LocationOfTitleLogoTwo}  {}%{logo/UUlm-logo-long}
+
+% logo for each slide
+\newcommand{\LogoOnEachSlide}         {logo/ANU-logo}
+\newcommand*{\OptionsForLogoPerSlide} {width=50pt} % height=20pt
+
+% Depending on the number of lines of your title and the number
+% of lines of the affiliation you might have to make adjustments
+\newcommand{\SpaceBeforeAuthorLine} {0cm}
+
+% Shows what's between the subsection name and the title name.
+\newcommand{\Delimiter} {:\quad} %many more possible, e.g., "\quad---\quad"
+
+
+
+% well, the title!
+\title{%
+  TITLE%                                         UPDATE!
+}
+
+% well, the date!
+\date{\today} %                                  UPDATE!
+
+% well, the author(s)!                           UPDATE!
+\newcommand{\FirstLecturer}  {PERSON 1}          % \author is overwritten by the style,
+\newcommand{\SecondLecturer} {PERSON 2}          % so don't specify it!
+
+% fix if you use superscripts in author list
+% \newcommand{\RunningAuthor} {PERSON 1 and PERSON 2}
+% Note that when you create a presentatio (e.g., for a paper) you could of course provide
+% one "block" for each author, which you achieve by defining both lecturers and telling
+% the package (with its optional argument) that you use two authors. However, for more than
+% two authors it's more canonical to use the standard one author style and just list all of
+% them separated by comma. The different affiliations would then be made clear by subscripts
+% Well, now however these subscripts will also appear next to the names on every single slide!
+% This of course doesn't make sense, so in this case you need to define this command and copy
+% the names in here again -- but without those subscripts.
+
+
+% well, your affiliation!                        UPDATE!
+\newcommand{\GroupFirstLecturer}  {GROUP 1}
+\newcommand{\GroupSecondLecturer} {GROUP 2}
+\institute{THE UNIVERSITY/COLLEGE}

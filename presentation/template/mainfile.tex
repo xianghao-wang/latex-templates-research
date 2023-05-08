@@ -1,0 +1,121 @@
+% author: Pascal Bercher
+%         pascal.bercher@anu.edu.au
+%         https://cecs.anu.edu.au/people/pascal-bercher
+% date: 22.11.2020
+
+\usepackage{booktabs}             % fancy tables
+\usepackage{amsmath,amssymb}      % standard math stuff
+\usepackage{appendixnumberbeamer} % appendix page numbers
+\usepackage[scaled=.90]{helvet}   % uses and scales down this font by 10%
+\usepackage{graphicx}
+
+\usepackage[defernumbers=true,minnames=1,maxnames=4,sorting=none,%
+backend=biber,firstinits=true]{biblatex} % references via biber
+\addbibresource{references.bib}
+
+
+\input{configuration}
+
+
+% optional arguments:
+%   background --> section and frame titles will use a background color
+%   twoAuthors --> the title slide (and the bottom of each slide) will show two authors
+\usepackage[]{../../AmnestyInternational}
+
+
+
+
+\begin{document}
+
+% this way, the title page's number is zero, so
+% the talk will start at 1 (rather than 2)
+\addtocounter{framenumber}{-1}
+\frame[plain]{\titlepage}
+
+\AddTitleSlides % to see section titles
+
+\section{Sec1}\label{sec:one}
+
+\begin{frame}{Table of Contents (This is the Frame Title)}
+  \tableofcontents
+\end{frame}
+
+% although the slides get produced incrementally here, you don't need the handoutframeselect
+% macro, since the last slide is always used automatically. So you only need that macro if
+% some intermediate slides are ONLY shown on the intermediate slides, which should only be
+% the case if the \only<> macro is used. An example is given later.
+\begin{frame}{Another Frame Title: Just an Example List}
+\begin{itemize}[<+->]
+  \item outer entry 1
+  \begin{itemize}
+    \item inner entry 1
+    \item inner entry 2
+  \end{itemize}
+    \item outer entry 2
+\end{itemize}
+\end{frame}
+
+
+
+\section{Sec2}\label{sec:two}
+
+\subsection{1st Subsection of Sec.\ 2}
+
+\begin{frame}{Frame Title}See something here? :)\end{frame}
+
+% to select frame 2 and 3 -- otherwise only 3 would be shown, meaning
+% that the picture shown only on slide 2 would not be included in the handout
+% see 
+\begin{handoutframeselect}[2,3]
+\begin{frame}<\Slideselection{1-}>[t]{Example that shows when handoutframeselect is required}
+\vspace{1.5cm}
+\begin{itemize}[<+->]
+  \item item 1
+	\item item 2\\
+	\only<+(-1)>{\includegraphics[width=3cm]{example-image-a}\\} Example graphic that is only shown "`right now"' but then disappears again! So we need to make sure that it still appears on the handout -- which is not the case if only the last slide is included (which is the default)
+	\item<+(-1)> item 3
+\end{itemize}
+\end{frame}
+\end{handoutframeselect}
+
+\begin{frame}{Frame Title}example citation \cite{AmnestyBook}\end{frame}
+
+\subsection{2nd Subsection of Sec.\ 2}
+
+\begin{frame}{Frame Title}some content\end{frame}
+\begin{frame}some content (this slide has no title)\end{frame}
+\begin{frame}some content (this slide has no title)\end{frame}
+
+\subsection{3rd and Last Subsection of Sec.\ 2}
+
+\begin{frame}{Frame Title}some content\end{frame}
+\begin{frame}{Frame Title}some content\end{frame}
+
+
+
+\section{Sec3}\label{sec:three}
+
+\begin{frame}{Another Frame Title}This time, like in Sec.\ \ref{sec:one}, there is no subsection!\end{frame}
+\begin{frame}{Yet Another Frame Title}This time, there is no subsection! (Still)\end{frame}
+\begin{frame}{Yet Another Frame Title, Again!}This time, there is no subsection! (Still again!)\end{frame}
+
+
+
+
+% Section: References
+\begin{frame}{Bibliography}Note that the section ``References'' is added automatically due to inlcuding the following list.\\ \printbibliography[heading=none]\end{frame}
+
+
+\appendix
+
+
+
+\section{App-Sec1}\label{sec:appendixOne}
+
+\begin{frame}{Appendix Page 1}
+  First appendix page! (Again, there is no subsection)
+\end{frame}
+
+
+
+\end{document}

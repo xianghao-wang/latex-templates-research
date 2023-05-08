@@ -1,0 +1,35 @@
+\documentclass[a0,landscape,30pt]{sciposter}
+
+\usepackage{vwcol}                     % for the fancy content boxes
+\usepackage{tikz}                      % for the fancy content boxes (I think! Not sure...)
+\usepackage{multicol,multirow}         % standard ...
+\usepackage{booktabs}                  % standard ...
+\usepackage{amsmath,amssymb,amsthm}    % standard ...
+\usepackage{graphicx,xcolor}           % standard ...
+
+\begin{document}
+
+\input{macros-styles}
+\input{macros}
+
+% header
+\leftlogo[2.25]{logos/ANU-logo}
+\rightlogo[1]{logos/UUlm-logo-short} % this is too much on the left! Don't know why...
+
+\title{TITLE OF THE PAPER\\second line of the title.}
+
+\author{Authors}
+\email{Mail addresses}
+\institute{Affiliation}
+\conference{Conference name}
+\renewcommand{\authorsize}{\huge}
+\renewcommand{\titlesize}{\Huge}
+\maketitle
+
+\setlength{\columnseprule}{0pt}
+
+\begin{multicols}{3}
+  \input{content}
+\end{multicols}
+
+\end{document}
